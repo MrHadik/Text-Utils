@@ -17,8 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Textfoam />} />
           <Route exact path="/Textfoam" element={<Textfoam />} />
-          <Route exact path="/Footer" element={<><Textfoam /><Footer /></>} /> 
-          
+          <Route exact path="/Footer" element={<Footer />} /> 
         </Routes>
       </Router>
     </>

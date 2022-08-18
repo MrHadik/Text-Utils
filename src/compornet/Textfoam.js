@@ -28,9 +28,7 @@ export default function Textfoam() {
     }
 
     const Copytext = () => {
-        var cp = document.getElementById("mybox");
-        cp.select();
-        navigator.clipboard.writeText(cp.value);
+        navigator.clipboard.writeText(text);
     }
 
     const rmespce = () => {
@@ -45,16 +43,16 @@ export default function Textfoam() {
                 <div className="mb-3">
                     <label htmlFor="exampleFormControlTextarea1" className="form-label"><h4>Enter Text to Modification</h4></label>
                     <textarea value={text} onChange={handeOnChang} className="form-control" id="mybox" rows="8"></textarea>
-                    <button className='btn btn-primary mt-3 mx-3' onClick={cgupcase}>Upercase</button>
-                    <button className='btn btn-primary mt-3' onClick={cgtitlecase}>Lovercase</button>
-                    <button className='btn btn-primary mt-3 mx-3' onClick={fortest}>TitleCase</button>
-                    <button className='btn btn-primary mt-3' onClick={Copytext}>Copy</button>
-                    <button className='btn btn-primary mt-3 mx-3' onClick={rmespce}>Remove Extra spces</button>
-                    <button className='btn btn-primary mt-3' onClick={cl}>Clear</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3 mx-3' onClick={cgupcase}>Upercase</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3' onClick={cgtitlecase}>Lovercase</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3 mx-3' onClick={fortest}>TitleCase</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3' onClick={Copytext}>Copy</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3 mx-3' onClick={rmespce}>Remove Extra spces</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3' onClick={cl}>Clear</button>
                 </div>
             </div>
             <div className='container my-3' id='err'>
-                <h5><p><b>{text.split(" ").length}</b> Word and <b>{text.length}</b> is carecter</p></h5>
+                <h5><p><b>{text.split(/\s+/).filter((element) => {return element.length!==0}).length}</b> Word and <b>{text.length}</b> is carecter</p></h5>
             </div>
         </>
     )
