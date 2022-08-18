@@ -43,7 +43,7 @@ export default function Textfoam() {
         <>
             <div className='container my-3'>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlTextarea1" className="form-label"><h4>Enter Text</h4></label>
+                    <label htmlFor="exampleFormControlTextarea1" className="form-label"><h4>Enter Text to Modification</h4></label>
                     <textarea value={text} onChange={handeOnChang} className="form-control" id="mybox" rows="8"></textarea>
                     <button className='btn btn-primary mt-3 mx-3' onClick={cgupcase}>Upercase</button>
                     <button className='btn btn-primary mt-3' onClick={cgtitlecase}>Lovercase</button>
