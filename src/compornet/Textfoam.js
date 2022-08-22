@@ -37,6 +37,7 @@ export default function Textfoam() {
     }
 
     const [text, seText] = useState("");
+    
     return (
         <>
             <div className='container my-3'>
