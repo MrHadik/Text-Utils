@@ -47,7 +47,7 @@ export default function Textfoam() {
                     <button disabled={text.length===0} className='btn btn-primary mt-3' onClick={cgtitlecase}>Lovercase</button>
                     <button disabled={text.length===0} className='btn btn-primary mt-3 mx-3' onClick={fortest}>TitleCase</button>
                     <button disabled={text.length===0} className='btn btn-primary mt-3' onClick={Copytext}>Copy</button>
-                    <button disabled={text.length===0} className='btn btn-primary mt-3 mx-3' onClick={rmespce}>Remove Extra spces</button>
+                    <button disabled={text.length===0} className='btn btn-primary mt-3 mx-3' onClick={rmespce}>Remove Extra Spces</button>
                     <button disabled={text.length===0} className='btn btn-primary mt-3' onClick={cl}>Clear</button>
                 </div>
             </div>
